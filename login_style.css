@@ -1,0 +1,147 @@
+
+body{
+    background: url(door.png) no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  flex-direction: column;
+  height: 100vh;     
+  width: 100vw;
+}
+
+.logo-container {
+    position: absolute;
+    top: 30px;
+    left: 250px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+}
+
+.logo-container img {
+    height: 30px; /* Adjust size as needed */
+    width: auto;
+}
+
+
+.box {
+  width: 50vw;
+  height: 20vw;
+  background-color: rgba(17, 52, 70, 0.4);
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content:flex-start;
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  transform: translateY(50px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.box h1 {
+    color: white;
+    font-size: 3.703vh;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    line-height:2em;
+    margin-top:5%;
+
+}
+
+.box p{
+    color: white;
+    margin: 0;
+    font-size: 2.222vh;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2%;
+}
+
+.box input {
+    background-color: rgba(58, 78, 90, 0.2);
+    backdrop-filter: blur(8px);
+
+    background-image: url('question.png');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    color: rgba(255, 255, 255, 1);
+    padding: 0 20px;
+    margin-bottom: 0px;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    width: 20vw;
+    height: 5vh;
+}
+
+.box input::placeholder {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; /* center buttons horizontally */
+    gap: 20px; /* space between buttons */
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.button1 {
+    width: 9vw;
+    height: 5vh;
+    font-size: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 25px;
+    color: white;
+    outline: none;   
+    border: none;
+    font-weight: 400;
+     background: linear-gradient(
+        to bottom,            
+        rgba(117, 131, 139, 1),    
+        rgba(59, 66, 70, 1)       
+    );
+}
+
+.button2 {
+    width: 9vw;
+    height: 5vh;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 25px;
+    background-color: rgba(31, 62, 81, 1);
+    color: white;
+    outline: none;   
+    border: none;
+    opacity: 58%;
+}
+
+
+.footer-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 0.8em;
+}
+
