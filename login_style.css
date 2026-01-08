@@ -33,7 +33,7 @@ body{
 
 
 .box {
-  width: 50vw;
+  width: 42vw;
   height: 20vw;
   background-color: rgba(17, 52, 70, 0.4);
   display: flex;
@@ -145,3 +145,68 @@ body{
     font-size: 0.8em;
 }
 
+
+@media only screen and (max-width: 1024px) {
+
+    .logo-container {
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 10px;
+    }
+
+    .logo-container img {
+        height: 25px; 
+    }
+
+    .box {
+        width: 80vw; 
+        height: auto; 
+        padding: 15px;
+    }
+
+    .box h1 {
+        font-size: 5vw; 
+        line-height: 1.2em;
+        margin-top: 5%;
+        white-space: nowrap;
+    }
+
+    .box p {
+        font-size: 3.5vw; 
+        margin-bottom: 10px;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+
+    .box input {
+        width: 90%;
+        height: 45px;
+        padding: 0 15px;
+        font-size: 0.85rem;
+        background-position: right 15px center;
+    }
+
+    .button-group {
+        gap: 10px; 
+        flex-wrap: nowrap; 
+        justify-content: center;
+        width: 100%;
+    }
+
+    .button1,
+    .button2 {
+        flex: 1 1 auto; 
+        max-width: 43%; 
+        height: 45px; 
+        font-size: 0.75rem; 
+    }
+
+    .footer-container {
+        bottom: 10px;
+        font-size: 0.7rem;
+        padding: 0 10px;
+        width: 100%;
+    }
+}
