@@ -1,0 +1,205 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*TreasureMap Font*/
+@font-face {
+    font-family: 'TreasureMap';
+    src: url('Treasuremap-Ea1vj.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    background: url(main_menu_bg.png) top no-repeat;
+    background-size: cover ;
+    color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+}
+
+
+
+.header-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: auto;
+    width: auto;
+    max-width: 150px;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: #35515D;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+
+}
+
+.menu-container h1 {
+    margin: 0;     
+    padding: 0;
+    font-family: 'TreasureMap', cursive;
+    font-size: 80px;
+}
+
+.menu-container p {
+    margin: 10px;     
+    padding: 0;
+    font-family: 'Montserrat', cursive;
+    font-size: 30px;
+}
+
+.grid-wrapper {
+    margin:50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8.38em;
+    width: 100%;
+    justify-items: center;
+}
+
+
+
+.circle{
+    position: relative;
+    background: url("circle.png") center center no-repeat;
+    width: 15vw ;
+    height: 15vh ;
+    z-index: 2;
+    padding: 50px 0px 90px 0px;
+}
+
+
+
+.icon1{
+    background: url("icon_card1.png") center center no-repeat;
+    width: 15vw ;
+    height: 15vh ;
+    padding: 40px 0px 0px 0px;
+    z-index: 3;
+}
+
+.icon2{
+    background: url("icon_card2.png") center center no-repeat;
+    width: 15vw ;
+    height: 15vh ;
+    padding: 40px 0px 0px 0px;
+    z-index: 3;
+}
+
+.icon3{
+    background: url("icon_card3.png") center center no-repeat;
+    width: 15vw ;
+    height: 15vh ;
+    padding: 40px 0px 0px 0px;
+    z-index: 3;
+}
+
+.icon4{
+    background: url("icon_card4.png") center center no-repeat;
+    width: 15vw ;
+    height: 15vh ;
+    padding: 40px 0px 0px 0px;
+    z-index: 3;
+}
+
+.text{
+    position: relative;
+    z-index: 2;
+}
+
+.text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', cursive;
+    font-size:32px;
+    font-weight:400;
+}
+
+.card {
+    width: 281.44px;
+    height: 350px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transform: rotate(0.5deg); /* rotates clockwise slightly */
+    transform-origin: top right; /* pivot from top-right corner */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3d525f;
+    z-index: 1;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3d48;
+    clip-path: path(
+        'M 220 0 Q 115 115, 200 235 Q 240 300, 200 350 L 0 350 L 0 0 Z'
+    );
+    z-index: 1;
+}
+
+.card:hover::before, .card:hover::after{
+    background: url("red_card.png") center/cover no-repeat;
+    z-index: 1;
+    border-radius: 20px;
+}
