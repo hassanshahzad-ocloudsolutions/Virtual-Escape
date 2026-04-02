@@ -94,7 +94,7 @@ body{
 .grid-wrapper {
     margin:50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 8.38em;
     width: 100%;
     justify-items: center;
@@ -203,3 +203,6 @@ body{
     z-index: 1;
     border-radius: 20px;
 }
+
+
+
