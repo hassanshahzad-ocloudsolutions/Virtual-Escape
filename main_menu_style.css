@@ -78,109 +78,57 @@ html, body {
     font-style: normal;
     font-weight: 400;
 }
+
 .menu-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    flex-wrap: wrap;
+    margin-top: 156px;
+}
 
+
+.menu-container p {
+    font-family: 'Montserrat', cursive;
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 14px;
+    margin-top: 0;
 }
 
 .menu-container h1 {
-    margin: 0;     
-    padding: 0;
     font-family: 'TreasureMap', cursive;
     font-size: 80px;
     color: white;
-}
-
-.menu-container p {
-    margin: 10px;     
-    padding: 0;
-    font-family: 'Montserrat', cursive;
-    font-size: 30px;
-    color: white;
+    margin-top: 0;
+    margin-bottom: 93px ;
 }
 
 .cards-container{
-    margin-top: 97px;
     display: flex;
     flex-wrap: wrap;
-    gap: 13.5px ;
+    gap: 13.5px;
     width: 100%;
     justify-content: center;
 }
 
-.circle{
-    position: relative;
-    background: url("circle.png") center center no-repeat;
-    width: 15vw ;
-    height: 15vh ;
-    z-index: 2;
-    padding: 50px 0px 90px 0px;
-}
-
-
-
-.icon1{
-    background: url("icon_card1.png") center center no-repeat;
-    width: 15vw ;
-    height: 15vh ;
-    padding: 40px 0px 0px 0px;
-    z-index: 3;
-}
-
-.icon2{
-    background: url("icon_card2.png") center center no-repeat;
-    width: 15vw ;
-    height: 15vh ;
-    padding: 40px 0px 0px 0px;
-    z-index: 3;
-}
-
-.icon3{
-    background: url("icon_card3.png") center center no-repeat;
-    width: 15vw ;
-    height: 15vh ;
-    padding: 40px 0px 0px 0px;
-    z-index: 3;
-}
-
-.icon4{
-    background: url("icon_card4.png") center center no-repeat;
-    width: 15vw ;
-    height: 15vh ;
-    padding: 40px 0px 0px 0px;
-    z-index: 3;
-}
-
-.text{
-    position: relative;
-    z-index: 2;
-}
-
-.text h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    font-family: 'Montserrat', cursive;
-    font-size:32px;
-    font-weight:400;
-}
 
 .card {
+    background: none;
+    border-radius: 20px;
     width: 281.44px;
     height: 350px;
-    border-radius: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+     gap: 81px;
     overflow: hidden;
     transform: rotate(0.5deg); /* rotates clockwise slightly */
     transform-origin: top right; /* pivot from top-right corner */
+    margin-bottom: 0;
 }
 
 .card::before {
@@ -190,8 +138,9 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #3d525f;
+    background: linear-gradient(135deg, #3B5667 0%, #2C3D48 100%);
     z-index: 1;
+
 }
 
 .card::after {
@@ -205,14 +154,75 @@ html, body {
     clip-path: path(
         'M 220 0 Q 115 115, 200 235 Q 240 300, 200 350 L 0 350 L 0 0 Z'
     );
+
     z-index: 1;
+    
 }
+
+.card > * {
+    flex: 0 0 auto;
+}
+
+
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("circle.png") center center no-repeat;
+    width: 142px ;
+    height: 142px ;
+    z-index: 2;
+    margin-top: 65px;
+}
+
+
+.icon1{
+    background: url("icon_card1.png") center center no-repeat;
+    width: 60.54px;
+    height: 52px;
+    z-index: 3;
+}
+
+.icon2{
+    background: url("icon_card2.png") center center no-repeat;
+    width: 41px;
+    height: 69px;
+    z-index: 3;
+}
+
+.icon3{
+    background: url("icon_card3.png") center center no-repeat;
+    width: 31px ;
+    height: 73px ;
+    z-index: 3;
+}
+
+.icon4{
+    background: url("icon_card4.png") center center no-repeat;
+    width: 40px;
+    height: 44px;
+    z-index: 3;
+}
+
+.text{
+    z-index: 2;
+    margin-bottom:0 ;
+}
+
+.text h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', cursive;
+    font-size:32px;
+    font-weight:400;
+}
+
 
 .card:hover::before, .card:hover::after{
     background: url("red_card.png") center/cover no-repeat;
     z-index: 1;
     border-radius: 20px;
 }
-
 
 
