@@ -97,7 +97,7 @@ html, body {
 .leaderboard-title{
     margin: clamp(20px, 5vw, 36.5px) auto clamp(20px, 5vw, 36.5px)  clamp(50px, 10vw, 104.5px);
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(10px, 2.0vw, 34px);
+    font-size: 34px;
     font-style: normal;
     font-weight: 400;
     color: white;
@@ -107,9 +107,10 @@ html, body {
     border: 1px solid rgba(255,255,255,1);
     width: min(954px, 100%);
     margin: 0 auto;
-    max-height: 70vh;
+    /* max-height: 70vh; */
+    height: auto; /* allow height to adjust with content, up to max-height */
     overflow-x: hidden; /* allow shrink; rows manage overflow */
-
+    box-sizing: border-box;
 }
 
 
@@ -164,7 +165,7 @@ html, body {
 
 .leaderboard-body{
     width: 100%;
-    min-height: 938px;
+    height: auto;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -247,7 +248,7 @@ html, body {
     width: 54px;
     height: 24px;
     margin-left: 137px;
-    margin-right: 77.97px;
+    margin-right: 0;
     margin-top: 3px;
 }
 
@@ -286,6 +287,12 @@ html, body {
 
 @media (max-width: 1301px) {
 
+    .leaderboard{
+        padding: 0 20px 0 20px;
+        box-sizing: content-box;
+    }
+
+
     .leaderboard-table-header{
         font-size: clamp(12px, 1.6vw, 17px);
         padding-left: 10px;
@@ -293,7 +300,6 @@ html, body {
         align-items: center;
     }
 
-    /* Keep header and body columns aligned while shrinking */
     .rank,
     .name,
     .hints,
@@ -311,9 +317,7 @@ html, body {
     .name {
         flex: 1 1 52%;
         min-width: 110px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+    
     }
     .hints { flex: 0 1 10%; min-width: 34px; justify-content: center; }
     .incorrect { flex: 0 1 12%; min-width: 42px; justify-content: center; margin-left: 5px; }
@@ -321,7 +325,7 @@ html, body {
 
     
 
-    /* Body content responsiveness at <= 980px */
+    
     .even-row,
     .odd-row {
         font-size: clamp(12px, 1.6vw, 17px);
@@ -352,9 +356,7 @@ html, body {
     .col-2 {
         flex: 1 1 52%;
         min-width: 110px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+
     }
 
     .col-3 {
@@ -389,3 +391,102 @@ html, body {
 
 
 
+@media (max-width: 960px){
+
+    .experios_logo_container{
+        position: absolute;
+        top:23px;
+        left:53px;
+        height: 35px;
+        width: 100px;
+    }
+
+    .experios_logo_container img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain; 
+    }
+
+    .header-buttons-container{
+        position: absolute;
+        top: 39px;
+        right: 45px;
+        display: inline-flex;
+        flex-direction: column;
+        gap: 5px;
+        color: white;
+    }
+
+
+    .connected{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width:auto;
+        gap:10px;
+        background: rgba(17,52,70,0.53);
+        border: 1px solid rgba(53, 81, 93, 1);
+        border-radius: 25px;
+        cursor: pointer;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+   
+
+    .logout{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height:35px;
+        width:auto;
+        gap:10px;
+        background: rgba(17,52,70,0.53);
+        border: 1px solid rgba(53, 81, 93, 1);
+        border-radius: 25px;
+        cursor: pointer;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+     .header-buttons-container img{
+        display: block;
+        object-fit: contain;
+        
+    }
+}
+
+@media (max-width: 390px) {
+     .experios_logo_container{
+        position: absolute;
+        top:0px;
+        left:53px;
+        height: 35px;
+        width: 100px;
+    }
+
+    .experios_logo_container img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain; 
+    }
+
+    .header-buttons-container{
+        position: absolute;
+        top:30px;
+        left:53px;
+        display: inline-flex;
+        flex-direction: column;
+        gap: 5px;
+        color: white;
+    }
+
+    
+}
