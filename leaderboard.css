@@ -178,7 +178,7 @@ html, body {
     background-color:#2D4955 ;
     display: flex;
     width: 100%;
-    height: 38px;
+    height: 31px;
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -192,7 +192,7 @@ html, body {
     background-color:#0E2634 ;
     display: flex;
     width: 100%;
-    height: 38px;
+    height: 31px;
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -410,10 +410,12 @@ html, body {
 
     .header-buttons-container{
         position: absolute;
-        top: 39px;
+        top: 30px;
         right: 45px;
         display: inline-flex;
         flex-direction: column;
+        align-items: center;
+        width: 200px;
         gap: 5px;
         color: white;
     }
@@ -423,8 +425,8 @@ html, body {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        height: 35px;
-        width:auto;
+        height: 37px;
+        width:200px;
         gap:10px;
         background: rgba(17,52,70,0.53);
         border: 1px solid rgba(53, 81, 93, 1);
@@ -442,8 +444,8 @@ html, body {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        height:35px;
-        width:auto;
+        height:37px;
+        width:141px;
         gap:10px;
         background: rgba(17,52,70,0.53);
         border: 1px solid rgba(53, 81, 93, 1);
@@ -462,7 +464,17 @@ html, body {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width:560px){
+    .name{
+        margin-left: 10px;
+    }
+
+    .col-2{
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 402px) {
      .experios_logo_container{
         position: absolute;
         top:0px;
@@ -486,7 +498,6 @@ html, body {
         flex-direction: column;
         gap: 5px;
         color: white;
-    }
-
-    
+    }   
 }
+
